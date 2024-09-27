@@ -1,0 +1,17 @@
+thresholds:
+  dbQueries:
+    max_ns_per_op: 200.00
+    max_bytes_per_op: 64
+    max_allocs_per_op: 10
+  
+  httpHandlers:
+    max_ns_per_op: 125.00
+    max_bytes_per_op: 64
+    max_allocs_per_op: 10
+
+benchmarks:
+  BenchmarkDBInsert: "dbQueries"
+
+  BenchmarkDBDelete: "dbQueries"
+
+  HandleGetUser: "httpHandlers"
